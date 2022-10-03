@@ -129,8 +129,6 @@ async function postRentalsReturn(req, res) {
       daysFee =
         (daysDifference - rental.daysRented) *
         (rental.originalPrice / rental.daysRented);
-      console.log(daysFee);
-      console.log(daysDifference);
     }
 
     await database.query(
