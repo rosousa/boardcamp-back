@@ -3,6 +3,7 @@ import cors from "cors";
 import categoriesRoutes from "./routes/categoriesRoute.js";
 import gamesRoutes from "./routes/gamesRoute.js";
 import customersRoutes from "./routes/CustomersRoute.js";
+import rentalsRoutes from "./routes/rentalsRoute.js";
 
 const app = express();
 
@@ -12,6 +13,7 @@ app.use(express.json());
 app.use(categoriesRoutes);
 app.use(gamesRoutes);
 app.use(customersRoutes);
+app.use(rentalsRoutes);
 
 app.get("/status", (req, res) => {
   res.sendStatus(200);
